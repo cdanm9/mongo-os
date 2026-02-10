@@ -4,11 +4,15 @@ const cds = require('@sap/cds')
 const MDBHandler =require("cap_mdb_handler").default;
 const db_name="mongo-os-db"
 const {mongohost,mongopass,mongouri,mongourl}=cds.env
+const {MONGO_HOST,MONGO_PASSWORD,MONGO_URI,MONGO_URL}=process.env
 const uri=mongohost+encodeURIComponent(mongopass)+mongouri;
+const M_URI=MONGO_HOST+encodeURIComponent(MONGO_PASSWORD)+MONGO_URI;
 console.log(mongourl)
+console.log(M_URI)
 
 module.exports = class CatalogService extends cds.ApplicationService { async init() {
-      const oHandler = new MDBHandler(uri, db_name);
+      // const oHandler = new MDBHandler(uri, db_name);
+      const oHandler = new MDBHandler(M_URI, db_name);
 
   const { Books } = cds.entities('CatalogService')
   
