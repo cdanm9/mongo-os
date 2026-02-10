@@ -1,0 +1,42 @@
+@server=http://localhost:4004
+@username=
+@password=
+
+
+### Books
+# @name Books_GET
+GET {{server}}/odata/v4/catalog/Books
+Authorization: Basic {{username}}:{{password}}
+
+
+### Books
+# @name Books_POST
+POST {{server}}/odata/v4/catalog/Books
+Content-Type: application/json
+# Authorization: Basic {{username}}:{{password}}
+
+{
+  "ID": 3,
+  "title": "Houkai Impact 3rd",
+  "stock": 400
+}
+
+
+### Books
+# @name Books_PATCH
+PATCH {{server}}/odata/v4/catalog/Books/2
+Content-Type: application/json
+# Authorization: Basic {{username}}:{{password}}
+
+{
+  "ID": 2,
+  "title": "Honkai Star Rail",
+  "stock": 300
+}
+
+
+### Books
+# @name Books_DELETE
+DELETE {{server}}/odata/v4/catalog/Books/3
+Content-Type: application/json
+# Authorization: Basic {{username}}:{{password}}

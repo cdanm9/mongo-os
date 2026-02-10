@@ -1,0 +1,19 @@
+{
+  "name": "mongo-os",
+  "version": "1.0.0",
+  "description": "A simple CAP project.",
+  "dependencies": {
+    "@sap/cds": "^9",
+    "cap_mdb_handler": "^1.1.1",
+    "express": "^4"
+  },
+  "devDependencies": {
+    "@cap-js/sqlite": "^2",
+    "@cap-js/cds-test": "^0"
+  },
+  "scripts": {
+    "start": "cds-serve",
+    "test": "node --test"
+  },
+  "private": true
+}
