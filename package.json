@@ -15,5 +15,13 @@
     "start": "cds-serve",
     "test": "node --test"
   },
-  "private": true
+  "private": true,
+  "cds":{
+    "server":{
+      "index":true
+    },
+    "requires":{
+      "auth":"mocked"
+    }
+  }
 }
